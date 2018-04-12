@@ -1,8 +1,4 @@
-install ansible in suse 12
-zypper addrepo https://download.opensuse.org/repositories/systemsmanagement/SLE_15/systemsmanagement.repo
-zypper refresh
-zypper install ansible
-
+Ansible plybook for appdynamics java agent
 
 check ansible is sinatlled or not
 ansible -v
