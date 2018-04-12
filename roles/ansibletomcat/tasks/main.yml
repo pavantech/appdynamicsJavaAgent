@@ -1,0 +1,11 @@
+---
+- name: Check prodess id of java
+  shell: ps -A| grep -v grep| grep java
+  register: register_java_process
+    
+- name: copying resource directory to target server /tmp location
+  copy: src=static_files/resources/*  dest=/tmp/resources/ follow=true mode=0777
+
+- name: Configure Tomcat server
+  template: src=controller-info-test.xml dest=/tmp/resources/AppServerAgent/conf
+ 
